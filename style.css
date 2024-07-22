@@ -86,7 +86,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 80px 100px 70px 70px;
+    padding: 40px 100px 70px 70px;
     flex-wrap: wrap;
     gap: 10px;
   }
@@ -116,8 +116,8 @@ body {
     flex-basis: calc(500px - 40px); /* Twice the width of col-1 and col-2 combined */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the start (top) */
-    gap: 10px; /* Adjust as needed */
+    justify-content: flex-start; 
+    gap: 10px; 
     align-items: space-around;
     margin-top: auto;
     margin-bottom: auto;
@@ -158,6 +158,11 @@ body {
   }
   
   @media (max-width: 900px) {
+    .outer-container, nav ul, .navbar {
+      margin-top: 0;
+
+    }
+    
     .main {
       grid-template-columns: 1fr;
       gap: 10px;
@@ -167,10 +172,6 @@ body {
       flex-wrap: wrap;
     }
   
-    /* .left,
-    .right {
-      padding: 40px;
-    } */
   
     .right .foodImg {
       height: 100%;
@@ -187,12 +188,39 @@ body {
       padding: 10px 0; 
       font-size: 18px;
     }
+
+    .page-one .navbar {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 601px)  and (max-width:679px) {
+    body {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
   @media (max-width: 600px) {
   
+    body {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+      flex-basis: calc(100% - 30px);
+      margin-bottom: 20px;
+    }
+
     .left h1 {
       font-size: 40px;
+    }
+
+    .left {
+      flex-wrap: wrap;
     }
   
     .click-btn {
@@ -208,11 +236,13 @@ body {
         font-size: 40px; 
     }
 
+    
+
   }
   
   @media (max-width: 470px) {
     .page-two {
-      padding: 60px 20px;
+      padding: 10px 20px;
     }
   
     .col-1,
@@ -226,8 +256,9 @@ body {
       padding: 20px;
     }
 
-    .right {
+    .right .foodImg {
         margin-left: 10px;
+        margin-right: 10px;
     }
   }
   
